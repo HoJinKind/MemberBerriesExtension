@@ -16,7 +16,8 @@ function saveText() {
   var toSaveText = textarea.value;
   var textTitle = textareaTitle.value;
   // Check that there's some code there.
-  if (!toSaveText) {
+  if (!toSaveText || !textTitle) {
+    !toSaveText ? textarea.setAttribute('placeholder',"plase input some text") : textareaTitle.setAttribute('placeholder',"plase input some text");
     return;
   }
   storage.set({[textTitle]: toSaveText});

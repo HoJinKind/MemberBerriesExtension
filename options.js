@@ -30,9 +30,7 @@ function generateBerries(){
             // Create a <button> element
         let empty = document.createTextNode("You have no berries :(");
         document.body.appendChild(empty);   
-        empty.
     }
-    
     for(let key in items){
       textFields[key] = document.createElement("textarea");
       textFields[key].value = items[key]
